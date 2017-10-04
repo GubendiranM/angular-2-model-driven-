@@ -1,0 +1,34 @@
+<div class="container">
+    <!-- <form #productForm="ngForm" (onSubmit)="onSubmit(productForm.value)"> -->
+    <form [formGroup]="model" (ngSubmit)="onSubmit()"> 
+
+        <div class="form-group">
+                <div *ngIf = "model.controls['name'].hasError('required')" class = "alert alert-danger alert-danger-icon">
+                    Please Enter Name ..!
+                </div>
+                <div *ngIf = "model.controls['name'].hasError('minlength')" class = "alert alert-danger alert-danger-icon">
+                    minlength errror ..!
+                </div>
+                <div *ngIf = "model.controls['name'].hasError('maxlength')" class = "alert alert-danger alert-danger-icon">
+                    maxlength errror ..!
+                </div>
+            <label>Id</label>
+            <input type="text" #modelId class="form-control" name="id" formControlName="id" />                        
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" #modelName class="form-control" formControlName="name" />         
+        </div>        
+        <div class="form-group" formGroupName="address">
+            <div class="form-group">
+                <label>Door No</label>
+                <input type="text" class="form-control" formControlName="doorNo" />
+            </div>
+            <div class="form-group">
+                <label>Street</label>
+                <input type="text" class="form-control" formControlName="street" />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+</div>

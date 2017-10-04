@@ -1,0 +1,13 @@
+<div class="container">
+    <h3>{{errorMsg}}</h3>
+    <ul>
+        <li *ngFor = "let tempModel of serviceModels">
+            {{tempModel.name}}
+        </li>
+    </ul>
+    <ul>
+        <li *ngFor = "let tempModel of serviceModelsUsingHttp">
+            {{tempModel.name}}
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,16 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+.alert-danger-icon{
+  background-image: url("./app/files/icons/danger.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 25px;
+  margin-right: 20px;
+}
+.selected{
+  background: blueviolet;
+}

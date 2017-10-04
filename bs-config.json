@@ -1,0 +1,12 @@
+{
+  "port": 8000,
+  "ui":{
+    "port": 4000
+  },
+  "server": {
+    "baseDir": "src",
+    "routes": {
+      "/node_modules": "node_modules"
+    }
+  }
+}
